@@ -1,6 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* 変数情報などはファイルの上部で記述しておきます（このコメント行は記述しないでOKです） */
+
+/* mixins, variables */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
 /* universal */
 
 body {
@@ -96,3 +109,67 @@ p {
     color: $state-danger-text;
   }
 }
+
+/* モーダルウインドウの位置調整 */
+
+.modal-dialog-center {
+  padding-top: 10%;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* various */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* table */
+
+table {
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;  
+}
+
+th {
+  vertical-align: middle;
+  text-align: center;  
+}
+
+
+/* form */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
